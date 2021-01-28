@@ -1,26 +1,14 @@
 # Laravel MQTT Package
 
-A simple Laravel 5 and 6 Library to connect/publish/subscribe to MQTT broker
+A simple Laravel Library to connect/publish/subscribe to MQTT broker
 
 Based on [bluerhinos/phpMQTT](https://github.com/bluerhinos/phpMQTT)
 
-For Example see this [repo](https://github.com/salmanzafar949/Laravel-Mqtt-Example)
-
-## Installation
+## 安装
 ```
-composer require salmanzafar/laravel-mqtt
+composer require shunhua/laravel-mqtt
 ```
-## Features
-
-* Name and Password Authentication
-* Certificate Protection for end to end encryption
-* Enable Debug mode to make it easier for debugging 
-* Now you can also set Client_id of your choice and if you don't want just simply don't use or set it to null
-* Set QOS flag directly from config file
-* Set Retain flag directly from config file
-* Addition of Helper functions to make development more easy
-
-## Enable the package (Optional)
+## 启用 (可选)
 
 This package implements Laravel auto-discovery feature. After you install it the package provider and facade are added automatically for laravel >= 5.5.
 
@@ -41,7 +29,7 @@ And then add the alias to your config/app.php:
        'Mqtt' => \Salman\Mqtt\Facades\Mqtt::class,
 ];
 ```
-## Configuration
+## 配置
 Publish the configuration file
 ```
 php artisan vendor:publish --provider="Salman\Mqtt\MqttServiceProvider"
@@ -57,7 +45,7 @@ php artisan vendor:publish --provider="Salman\Mqtt\MqttServiceProvider"
     'qos'      => env('mqtt_qos', 0), // set quality of service here
     'retain'   => env('mqtt_retain', 0) // it should be 0 or 1 Whether the message should be retained.- Retain Flag
 ```
-#### Publishing topic
+#### 发布
 
 ```
 use Salman\Mqtt\MqttClass\Mqtt;
@@ -76,7 +64,7 @@ public function SendMsgViaMqtt($topic, $message)
            return "Failed";
 }
 ```
-#### Publishing topic using Facade
+#### 使用 Facade 发布
 
 ```
 use Mqtt;
@@ -96,7 +84,7 @@ public function SendMsgViaMqtt($topic, $message)
 }
 ```
 
-#### Subscribing topic
+#### 订阅
 
 ```
 use Salman\Mqtt\MqttClass\Mqtt;
@@ -114,7 +102,7 @@ public function SubscribetoTopic($topic)
 
     }
 ```
-#### Subscribing topic using Facade
+#### 使用 Facade 订阅
 
 ```
 use Mqtt;
@@ -131,7 +119,7 @@ public function SubscribetoTopic($topic)
     }
 ```
 
-#### Publishing topic using Helper method
+#### 使用 Helper 发布
 
 ```
 
@@ -150,7 +138,7 @@ public function SendMsgViaMqtt($topic, $message)
 }
 ```
 
-#### Subscribing topic using Helper method
+#### 使用 Helper 订阅
 
 ```
 public function SubscribetoTopic($topic)
