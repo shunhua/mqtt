@@ -1,12 +1,12 @@
 {
     "name": "shunhua/laravel-mqtt",
-    "description": "A simple Laravel 5 and 6 Library to connect/publish/subscribe to MQTT broker",
+    "description": "A simple Laravel Library to connect/publish/subscribe to MQTT broker",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Salman Zafar",
-            "email": "salmanzafar949@gmail.com"
+            "name": "shunhua",
+            "email": "2399315737@qq.com"
         }
     ],
     "keywords": [
