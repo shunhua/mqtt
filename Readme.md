@@ -1,6 +1,7 @@
 # Laravel MQTT 扩展包
 
 A simple Laravel Library to connect/publish/subscribe to MQTT broker
+
 支持实例化多应用配置
 
 ## 安装
